@@ -1,33 +1,19 @@
 import './App.css';
 import React from 'react';
-
-class Banner extends React.Component{
-  render() {
-    return (
-      <h1 className="title">{this.props.name}</h1>
-    );
-  }
-}
-
-class Exhibit extends React.Component {
-  render() {
-    return (
-      <div className="exhibit">
-        <Banner name={this.props.title}/>
-        <div className="datapoint">
-          <h6>datapoint</h6>
-        </div>
-      </div>
-      
-    );
-  };
-}
+import Banner from './Banner'
+import Exhibit from './Exhibit'
+import FetchIp from './FetchIp';
 
 function App() {
   return (
     <div className="App">
-      <Banner name="Sextant" className/>
-      <Exhibit title="hello"/>
+      <Banner name="Sextant"/>
+      <Exhibit title="V6">
+        <FetchIp url="https://api.ipify.org?format=json"/>
+      </Exhibit>
+      <Exhibit title="V4">
+        <FetchIp url='https://api64.ipify.org?format=json' />
+      </Exhibit>
     </div>
   );
 }
