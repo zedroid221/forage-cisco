@@ -34,11 +34,15 @@ code {
 }
 
 .exhibit{
-  max-width:40%;
+  width:40%;
   padding:2%;
-  margin:2%;
+  margin-top:5%;
+  margin-left:3.25%;
+  margin-right:2%;
   border-radius:1em;
   background-color: #f2ffff;
+  float:left;
+  color: black;
 }
 
 .datapoint{
@@ -46,5 +50,6 @@ code {
   max-width:90%;
   margin:5%;
   padding:5px;
+  color:black;
 
 }

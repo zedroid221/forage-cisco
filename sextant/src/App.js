@@ -3,6 +3,7 @@ import React from 'react';
 import Banner from './Banner'
 import Exhibit from './Exhibit'
 import FetchIp from './FetchIp';
+import Latency from './Latency';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       </Exhibit>
       <Exhibit title="V4">
         <FetchIp url='https://api64.ipify.org?format=json' />
+      </Exhibit>
+      <Exhibit title="websocket">
+        <Latency></Latency>
       </Exhibit>
     </div>
   );
